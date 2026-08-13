@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import NavigationBar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import Services from "./pages/Services";
@@ -18,6 +19,8 @@ function App() {
         <Route path="/servicios/:id" element={<ServiceDetail />} />
         <Route path="/cotizacion" element={<Quote />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }
