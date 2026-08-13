@@ -1,24 +1,25 @@
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+
+import NavigationBar from "./components/Navbar";
+
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import ServiceDetail from "./pages/ServiceDetail";
+import Quote from "./pages/Quote";
 
 function App() {
   return (
-    <main className="page">
-      <header className="page-header">
-        <h1>Pagina Basica</h1>
-        <p>Proyecto limpio con React y Vite.</p>
-      </header>
+    <>
+      <NavigationBar />
 
-      <section className="page-content">
-        <h2>Bienvenido</h2>
-        <p>
-          Esta es una estructura minima para comenzar. Desde aqui puedes agregar
-          componentes, rutas y logica segun tus requerimientos.
-        </p>
-      </section>
-
-      <footer className="page-footer">2026 · Proyecto Requerimientos</footer>
-    </main>
-  )
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/servicios" element={<Services />} />
+        <Route path="/servicios/:id" element={<ServiceDetail />} />
+        <Route path="/cotizacion" element={<Quote />} />
+      </Routes>
+    </>
+  );
 }
 
-export default App
+export default App;
