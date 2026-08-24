@@ -1,10 +1,57 @@
-* {
-  box-sizing: border-box;
+:root {
+  --verde-bosque: #2D4030;
+  --verde-salvia: #95B8A6;
+  --verde-menta: #B8E0D2;
+  --blanco-hueso: #F7F9F7;
 }
 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f5f6f8;
-  color: #1f2937;
+  background-color: var(--blanco-hueso) !important;
+  color: var(--verde-bosque);
+}
+
+.btn-primary {
+  background-color: var(--verde-salvia) !important;
+  border-color: var(--verde-salvia) !important;
+  border-radius: 20px !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--verde-bosque) !important;
+  border-color: var(--verde-bosque) !important;
+  transform: translateY(-2px);
+}
+
+/* Color del título de la card */
+.titulo-servicio {
+  color: var(--verde-bosque);
+}
+
+/* Estilo base de la tarjeta */
+.card-servicio {
+  border: 1px solid rgba(149, 184, 166, 0.3) !important;
+  background-color: #ffffff;
+  border-radius: 16px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-servicio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(45, 64, 48, 0.08) !important;
+}
+
+.btn-botanico-outline {
+  background-color: transparent;
+  color: var(--verde-bosque);
+  border: 1.5px solid var(--verde-salvia);
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-botanico-outline:hover {
+  background-color: var(--verde-salvia);
+  color: #ffffff;
 }

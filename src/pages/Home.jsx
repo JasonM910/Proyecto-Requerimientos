@@ -28,22 +28,22 @@ function Home() {
   return (
     <>
       {/* Presentación principal */}
-      <section className="bg-light py-4">
+      <section className="py-5 my-3 rounded-4" style={{backgroundColor: '#EBF3EE'}}>
         <Container className="text-center py-4">
 
-          <h1 className="display-4 fw-bold">
+          <h1 className="display-4 fw-bold" style={{ color: 'var(--verde-bosque)' }}>
             Catering Services
           </h1>
 
-          <p className="lead mt-3">
-            El servicio de catering ideal para tus eventos.
+          <p className="lead mt-3 text-muted">
+            El servicio de catering ideal para tus eventos especiales.
           </p>
 
           <Button
             as={Link}
             to="/servicios"
             size="lg"
-            className="mt-3"
+            className="btn-botanico mt-3 shadow-sm"
           >
             Ver servicios
           </Button>
