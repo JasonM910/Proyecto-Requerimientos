@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Accordion, Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ServiceCard from "../components/ServiceCard";
 import servicios from "../data/services";
@@ -98,6 +98,68 @@ function Home() {
 
         </Container>
 
+      </section>
+
+
+      {/* Información complementaria */}
+      <section className="seccion-informacion py-5" aria-labelledby="informacion-titulo">
+        <Container>
+          <div className="text-center mb-5">
+            <span className="seccion-etiqueta">Antes de reservar</span>
+            <h2 id="informacion-titulo" className="mt-2 mb-2">
+              Información importante para tu evento
+            </h2>
+            <p className="text-muted mx-auto mb-0 texto-limitado">
+              Conoce las condiciones generales del servicio y algunos detalles útiles para planificar con tranquilidad.
+            </p>
+          </div>
+
+          <Row className="g-4 align-items-start">
+            <Col lg={7}>
+              <div className="panel-detalle p-4 p-md-5 rounded-4">
+                <h3 className="h4 mb-4">Condiciones generales</h3>
+                <Accordion className="acordeon-botanico" flush>
+                  <Accordion.Item eventKey="0">
+                    <Accordion.Header>Reserva y confirmación</Accordion.Header>
+                    <Accordion.Body>
+                      La fecha se reserva una vez aceptada la cotización y realizado el anticipo acordado. La disponibilidad está sujeta a confirmación.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="1">
+                    <Accordion.Header>Cantidad de invitados</Accordion.Header>
+                    <Accordion.Body>
+                      La cantidad final de personas debe confirmarse con anticipación. Los cambios posteriores están sujetos a disponibilidad y pueden modificar el precio.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="2">
+                    <Accordion.Header>Cambios y cancelaciones</Accordion.Header>
+                    <Accordion.Body>
+                      Los cambios de fecha, menú o alcance deben solicitarse con anticipación. Las cancelaciones y devoluciones se evaluarán según los gastos ya realizados.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="3">
+                    <Accordion.Header>Montaje y ubicación</Accordion.Header>
+                    <Accordion.Body>
+                      El acceso, horario de montaje, condiciones del lugar y costos de traslado se coordinan antes del evento y deben quedar incluidos en la propuesta final.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+              </div>
+            </Col>
+
+            <Col lg={5}>
+              <aside className="panel-informacion p-4 p-md-5 rounded-4">
+                <h3 className="h4 mb-4">Información adicional</h3>
+                <ul className="lista-informacion mb-0">
+                  <li><strong>Planificación</strong><span>Recomendamos solicitar la cotización con suficiente anticipación, especialmente para fechas de alta demanda.</span></li>
+                  <li><strong>Opciones especiales</strong><span>Podemos adaptar el menú para preferencias vegetarianas y restricciones alimentarias informadas previamente.</span></li>
+                  <li><strong>Área de servicio</strong><span>Atendemos eventos en San José y zonas cercanas; otras ubicaciones se revisan al preparar la propuesta.</span></li>
+                  <li><strong>Propuesta personalizada</strong><span>El precio final depende del menú, cantidad de invitados, ubicación, montaje y personal requerido.</span></li>
+                </ul>
+              </aside>
+            </Col>
+          </Row>
+        </Container>
       </section>
 
 

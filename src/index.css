@@ -221,6 +221,60 @@ main {
   border-color: var(--verde-salvia);
 }
 
+.seccion-informacion {
+  background-color: var(--blanco-hueso);
+}
+
+.acordeon-botanico {
+  --bs-accordion-color: var(--verde-bosque);
+  --bs-accordion-bg: transparent;
+  --bs-accordion-border-color: rgba(var(--verde-salvia-rgb), 0.45);
+  --bs-accordion-active-color: var(--verde-bosque);
+  --bs-accordion-active-bg: var(--verde-hielo);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.2rem rgba(var(--verde-salvia-rgb), 0.22);
+}
+
+.acordeon-botanico .accordion-button {
+  font-weight: 600;
+}
+
+.panel-informacion {
+  color: var(--blanco-puro);
+  background-color: var(--verde-bosque);
+  box-shadow: 0 14px 35px rgba(var(--verde-bosque-rgb), 0.14);
+}
+
+.lista-informacion {
+  display: grid;
+  gap: 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.lista-informacion li {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.lista-informacion li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.lista-informacion strong,
+.lista-informacion span {
+  display: block;
+}
+
+.lista-informacion strong {
+  margin-bottom: 0.3rem;
+  color: var(--verde-menta);
+}
+
+.lista-informacion span {
+  color: var(--blanco-hueso);
+}
+
 .enlace-regreso {
   color: var(--verde-bosque);
   font-weight: 600;
