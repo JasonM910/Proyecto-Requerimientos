@@ -119,6 +119,69 @@ main {
   box-shadow: 0 14px 35px rgba(var(--verde-bosque-rgb), 0.1);
 }
 
+.panel-contacto {
+  background-color: var(--verde-niebla);
+  border: 1px solid rgba(var(--verde-salvia-rgb), 0.45);
+}
+
+.lista-contacto {
+  display: grid;
+  gap: 1.35rem;
+  font-style: normal;
+}
+
+.lista-contacto > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.lista-contacto strong,
+.lista-contacto a,
+.lista-contacto div > span:not(.icono-contacto) {
+  display: block;
+}
+
+.lista-contacto a {
+  color: var(--verde-bosque);
+  overflow-wrap: anywhere;
+}
+
+.icono-contacto {
+  display: grid;
+  place-items: center;
+  flex: 0 0 2rem;
+  height: 2rem;
+  color: var(--verde-bosque);
+  background-color: var(--verde-menta);
+  border-radius: 50%;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.panel-detalle .form-label {
+  color: var(--verde-bosque);
+  font-weight: 600;
+}
+
+.panel-detalle .form-control,
+.panel-detalle .form-select {
+  border-color: rgba(var(--verde-salvia-rgb), 0.65);
+  padding: 0.7rem 0.85rem;
+}
+
+.panel-detalle .form-control:focus,
+.panel-detalle .form-select:focus {
+  border-color: var(--verde-salvia);
+  box-shadow: 0 0 0 0.2rem rgba(var(--verde-salvia-rgb), 0.22);
+}
+
+.confirmacion-envio {
+  color: var(--verde-bosque);
+  background-color: var(--verde-hielo);
+  border-color: var(--verde-salvia);
+}
+
 .enlace-regreso {
   color: var(--verde-bosque);
   font-weight: 600;
@@ -141,6 +204,49 @@ main {
 
 .footer-botanico {
   color: var(--blanco-hueso);
+}
+
+.footer-contenido {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.footer-contactos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem 1.5rem;
+  font-style: normal;
+}
+
+.footer-contactos a,
+.footer-contactos span {
+  color: var(--blanco-hueso);
+  overflow-wrap: anywhere;
+}
+
+.footer-contactos a:hover,
+.footer-contactos a:focus-visible {
+  color: var(--verde-menta);
+}
+
+.footer-copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--verde-niebla);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 767.98px) {
+  .footer-contenido,
+  .footer-contactos {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-contenido {
+    gap: 1.5rem;
+    text-align: center;
+  }
 }
 
 .btn-botanico,
