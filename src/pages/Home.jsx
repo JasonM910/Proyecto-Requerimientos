@@ -153,7 +153,7 @@ function Home() {
                 <ul className="lista-informacion mb-0">
                   <li><strong>Planificación</strong><span>Recomendamos solicitar la cotización con suficiente anticipación, especialmente para fechas de alta demanda.</span></li>
                   <li><strong>Opciones especiales</strong><span>Podemos adaptar el menú para preferencias vegetarianas y restricciones alimentarias informadas previamente.</span></li>
-                  <li><strong>Área de servicio</strong><span>Atendemos eventos en San José y zonas cercanas; otras ubicaciones se revisan al preparar la propuesta.</span></li>
+                  <li><strong>Área de servicio</strong><span>Atendemos eventos en San Carlos y zonas cercanas; otras ubicaciones se revisan al preparar la propuesta.</span></li>
                   <li><strong>Propuesta personalizada</strong><span>El precio final depende del menú, cantidad de invitados, ubicación, montaje y personal requerido.</span></li>
                 </ul>
               </aside>
