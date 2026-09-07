@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import ServiceCard from "../components/ServiceCard";
 import servicios from "../data/services";
+import menus from "../data/menus";
 
 function Services() {
   return (
@@ -32,6 +33,39 @@ function Services() {
                   tipoEvento={servicio.tipoEvento}
                   caracteristicas={servicio.caracteristicas.slice(0, 2)}
                 />
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+
+      <section className="seccion-menus py-5" aria-labelledby="menus-titulo">
+        <Container>
+          <div className="text-center mb-5">
+            <span className="seccion-etiqueta">Opciones gastronómicas</span>
+            <h2 id="menus-titulo" className="mt-2 mb-2">Nuestros menús</h2>
+            <p className="text-muted mx-auto mb-0 texto-limitado">
+              Explora nuestras propuestas base. Cada menú puede adaptarse a las necesidades y preferencias de tu evento.
+            </p>
+          </div>
+
+          <Row className="g-4">
+            {menus.map((menu) => (
+              <Col key={menu.id} md={6} lg={4}>
+                <article className="card-menu h-100 rounded-4 overflow-hidden">
+                  <div className="imagen-menu-placeholder" role="img" aria-label={`Espacio para imagen de ${menu.nombre}`}>
+                    <span aria-hidden="true">Imagen del menú</span>
+                  </div>
+                  <div className="p-4">
+                    <span className="seccion-etiqueta">{menu.categoria}</span>
+                    <h3 className="h5 fw-bold mt-2 mb-2">{menu.nombre}</h3>
+                    <p className="text-muted">{menu.descripcion}</p>
+                    <h4 className="h6 mb-2">Opciones incluidas</h4>
+                    <ul className="lista-menu small mb-0">
+                      {menu.opciones.map((opcion) => <li key={opcion}>{opcion}</li>)}
+                    </ul>
+                  </div>
+                </article>
               </Col>
             ))}
           </Row>

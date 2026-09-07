@@ -87,6 +87,45 @@ main {
   color: var(--verde-salvia);
 }
 
+.seccion-menus {
+  background-color: var(--verde-hielo);
+}
+
+.card-menu {
+  background-color: var(--blanco-puro);
+  border: 1px solid rgba(var(--verde-salvia-rgb), 0.35);
+  box-shadow: 0 10px 24px rgba(var(--verde-bosque-rgb), 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-menu:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(var(--verde-bosque-rgb), 0.12);
+}
+
+.imagen-menu-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 180px;
+  color: var(--verde-etiqueta);
+  background-color: var(--verde-niebla);
+  border-bottom: 1px dashed rgba(var(--verde-salvia-rgb), 0.85);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.lista-menu {
+  display: grid;
+  gap: 0.45rem;
+  padding-left: 1.2rem;
+}
+
+.lista-menu li::marker {
+  color: var(--verde-salvia);
+}
+
 .lista-caracteristicas {
   display: grid;
   gap: 1rem;
