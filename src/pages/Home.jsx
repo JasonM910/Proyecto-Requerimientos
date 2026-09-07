@@ -1,42 +1,22 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ServiceCard from "../components/ServiceCard";
+import servicios from "../data/services";
 
 function Home() {
-
-  const servicios = [
-    {
-      id: 1,
-      titulo: "Catering para bodas",
-      descripcion:
-        "Servicio de alimentación para bodas y celebraciones especiales."
-    },
-    {
-      id: 2,
-      titulo: "Catering para cumpleaños",
-      descripcion:
-        "Opciones de alimentación para cumpleaños y reuniones familiares."
-    },
-    {
-      id: 3,
-      titulo: "Catering empresarial",
-      descripcion:
-        "Servicio de catering para reuniones, capacitaciones y eventos empresariales."
-    }
-  ];
-
   return (
     <>
-      {/* Presentación principal */}
-      <section className="py-5 my-3 rounded-4" style={{backgroundColor: '#EBF3EE'}}>
+      {/* Presentación e identidad del negocio */}
+      <section className="hero-inicio py-5">
         <Container className="text-center py-4">
+          <span className="hero-etiqueta">Cocina · Celebración · Experiencia</span>
 
-          <h1 className="display-4 fw-bold" style={{ color: 'var(--verde-bosque)' }}>
+          <h1 className="display-4 fw-bold">
             Catering Services
           </h1>
 
           <p className="lead mt-3 text-muted">
-            El servicio de catering ideal para tus eventos especiales.
+            Sabor que reúne. Creamos experiencias gastronómicas para tus eventos especiales.
           </p>
 
           <Button
@@ -48,6 +28,42 @@ function Home() {
             Ver servicios
           </Button>
 
+        </Container>
+      </section>
+
+      {/* Información general del negocio */}
+      <section className="py-5" aria-labelledby="sobre-nosotros-titulo">
+        <Container>
+          <Row className="align-items-center g-5">
+            <Col lg={7}>
+              <span className="seccion-etiqueta">Quiénes somos</span>
+              <h2 id="sobre-nosotros-titulo" className="mt-2 mb-3">
+                Convertimos cada evento en un momento para recordar
+              </h2>
+              <p className="text-muted mb-3">
+                Somos un negocio de catering dedicado a planificar y servir
+                experiencias gastronómicas para celebraciones sociales y eventos
+                corporativos. Adaptamos cada propuesta al tipo de evento, cantidad
+                de invitados y preferencias de nuestros clientes.
+              </p>
+              <p className="text-muted mb-0">
+                Nuestro equipo acompaña cada detalle, desde la selección del menú
+                hasta la presentación y el servicio, con ingredientes frescos,
+                atención cercana y una organización confiable.
+              </p>
+            </Col>
+
+            <Col lg={5}>
+              <div className="panel-valores p-4 p-md-5 rounded-4">
+                <h3 className="h5 mb-4">Lo que nos distingue</h3>
+                <ul className="lista-valores mb-0">
+                  <li>Menús adaptados a cada ocasión</li>
+                  <li>Ingredientes frescos y de calidad</li>
+                  <li>Presentación cuidada y servicio cercano</li>
+                </ul>
+              </div>
+            </Col>
+          </Row>
         </Container>
       </section>
 
@@ -86,7 +102,7 @@ function Home() {
 
 
       {/* Cotización */}
-      <section className="bg-light py-5">
+      <section className="encabezado-pagina py-5">
 
         <Container className="text-center">
 
@@ -101,7 +117,7 @@ function Home() {
           <Button
             as={Link}
             to="/cotizacion"
-            variant="success"
+            className="btn-botanico mt-2"
           >
             Solicitar cotización
           </Button>

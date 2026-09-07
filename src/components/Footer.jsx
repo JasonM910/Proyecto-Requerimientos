@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 
 function Footer() {
   return (
-    <footer className="bg-dark text-light mt-5 py-4">
+    <footer className="footer-botanico py-4">
       <Container className="text-center">
 
         <h5>Catering Services</h5>

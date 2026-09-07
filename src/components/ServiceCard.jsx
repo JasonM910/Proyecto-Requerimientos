@@ -1,16 +1,13 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function ServiceCard({ id, titulo, descripcion }) {
+function ServiceCard({ id, titulo, descripcion, tipoEvento, caracteristicas }) {
   return (
     <Card className="card card-servicio h-100 p-3 shadow-sm">
-      <Card.Body className="card-body d-flex flex-column text-center">
-        {/* futuro icono dinamico maybe */}
-        <div className="icono-contenedor mx-auto mb-3">
-          {/* iconoooooo */}
-        </div>
+      <Card.Body className="card-body d-flex flex-column">
+        {tipoEvento && <span className="seccion-etiqueta mb-2">{tipoEvento}</span>}
 
-        <Card.Title as="h5" className={"fw-bold titulo-servicio"}>
+        <Card.Title as="h3" className="h5 fw-bold titulo-servicio">
           {titulo}
         </Card.Title>
 
@@ -18,9 +15,16 @@ function ServiceCard({ id, titulo, descripcion }) {
           {descripcion}
         </Card.Text>
 
-        {/* btn a los detalles del servicio */}
+        {caracteristicas && (
+          <ul className="caracteristicas-resumen small mb-2">
+            {caracteristicas.map((caracteristica) => (
+              <li key={caracteristica}>{caracteristica}</li>
+            ))}
+          </ul>
+        )}
+
         <Link to={`/servicios/${id}`} className="btn btn-botanico-outline mt-3">
-          Ver detalles
+          Consultar características
         </Link>
       </Card.Body>
     </Card>

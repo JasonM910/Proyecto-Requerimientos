@@ -1,8 +1,22 @@
 :root {
-  --verde-bosque: #2D4030;
-  --verde-salvia: #95B8A6;
-  --verde-menta: #B8E0D2;
-  --blanco-hueso: #F7F9F7;
+  /* Paleta de marca */
+  --verde-bosque: #2d4030;
+  --verde-bosque-rgb: 45, 64, 48;
+  --verde-salvia: #95b8a6;
+  --verde-salvia-rgb: 149, 184, 166;
+  --verde-menta: #b8e0d2;
+  --verde-niebla: #dcebe3;
+  --verde-hielo: #ebf3ee;
+  --verde-etiqueta: #597564;
+  --blanco-hueso: #f7f9f7;
+  --blanco-puro: #ffffff;
+  --texto-secundario: #607066;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
 }
 
 body {
@@ -10,17 +24,146 @@ body {
   color: var(--verde-bosque);
 }
 
-.btn-primary {
-  background-color: var(--verde-salvia) !important;
-  border-color: var(--verde-salvia) !important;
-  border-radius: 20px !important;
-  transition: all 0.3s ease !important;
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.btn-primary:hover {
+main {
+  flex: 1;
+}
+
+.text-muted {
+  color: var(--texto-secundario) !important;
+}
+
+.hero-inicio {
+  background-color: var(--verde-niebla);
+}
+
+.hero-etiqueta,
+.seccion-etiqueta {
+  color: var(--verde-etiqueta);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.panel-valores {
+  background-color: var(--verde-bosque);
+  color: var(--blanco-puro);
+  box-shadow: 0 14px 35px rgba(var(--verde-bosque-rgb), 0.14);
+}
+
+.lista-valores {
+  display: grid;
+  gap: 1rem;
+  padding-left: 1.25rem;
+}
+
+.lista-valores li::marker {
+  color: var(--verde-menta);
+}
+
+.encabezado-pagina {
+  background-color: var(--verde-hielo);
+}
+
+.texto-limitado {
+  max-width: 720px;
+}
+
+.caracteristicas-resumen,
+.lista-incluye {
+  display: grid;
+  gap: 0.65rem;
+  padding-left: 1.2rem;
+}
+
+.caracteristicas-resumen li::marker,
+.lista-incluye li::marker {
+  color: var(--verde-salvia);
+}
+
+.lista-caracteristicas {
+  display: grid;
+  gap: 1rem;
+}
+
+.caracteristica {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background-color: var(--blanco-puro);
+  border: 1px solid rgba(var(--verde-salvia-rgb), 0.35);
+  border-radius: 12px;
+}
+
+.caracteristica span {
+  display: grid;
+  place-items: center;
+  flex: 0 0 1.75rem;
+  height: 1.75rem;
+  color: var(--verde-bosque);
+  background-color: var(--verde-menta);
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.panel-detalle {
+  background-color: var(--blanco-puro);
+  border: 1px solid rgba(var(--verde-salvia-rgb), 0.35);
+  box-shadow: 0 14px 35px rgba(var(--verde-bosque-rgb), 0.1);
+}
+
+.enlace-regreso {
+  color: var(--verde-bosque);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.enlace-regreso:hover {
+  text-decoration: underline;
+}
+
+.navbar-botanica,
+.footer-botanico {
+  background-color: var(--verde-bosque);
+}
+
+.navbar-botanica .navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.footer-botanico {
+  color: var(--blanco-hueso);
+}
+
+.btn-botanico,
+.btn-botanico.btn-primary {
+  background-color: var(--verde-salvia);
+  border: 1px solid var(--verde-salvia);
+  border-radius: 999px;
+  color: var(--verde-bosque);
+  font-weight: 600;
+  padding-inline: 1.35rem;
+  transition: background-color 0.25s ease, border-color 0.25s ease,
+    color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-botanico:hover,
+.btn-botanico:focus-visible,
+.btn-botanico.btn-primary:hover,
+.btn-botanico.btn-primary:focus-visible {
   background-color: var(--verde-bosque) !important;
   border-color: var(--verde-bosque) !important;
+  color: var(--blanco-puro) !important;
   transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(var(--verde-bosque-rgb), 0.18);
 }
 
 /* Color del título de la card */
@@ -30,28 +173,31 @@ body {
 
 /* Estilo base de la tarjeta */
 .card-servicio {
-  border: 1px solid rgba(149, 184, 166, 0.3) !important;
-  background-color: #ffffff;
+  border: 1px solid rgba(var(--verde-salvia-rgb), 0.3) !important;
+  background-color: var(--blanco-puro);
   border-radius: 16px !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-servicio:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(45, 64, 48, 0.08) !important;
+  box-shadow: 0 10px 20px rgba(var(--verde-bosque-rgb), 0.08) !important;
 }
 
 .btn-botanico-outline {
   background-color: transparent;
   color: var(--verde-bosque);
   border: 1.5px solid var(--verde-salvia);
-  border-radius: 20px;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background-color 0.25s ease, border-color 0.25s ease,
+    color 0.25s ease, transform 0.25s ease;
   text-decoration: none;
 }
 
 .btn-botanico-outline:hover {
-  background-color: var(--verde-salvia);
-  color: #ffffff;
+  background-color: var(--verde-bosque);
+  border-color: var(--verde-bosque);
+  color: var(--blanco-puro);
+  transform: translateY(-2px);
 }
