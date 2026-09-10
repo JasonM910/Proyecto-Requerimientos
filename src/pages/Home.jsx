@@ -58,6 +58,17 @@ function Home() {
                   Desde la preparación con ingredientes frescos hasta el montaje final, aseguramos una experiencia fluida y confiable.
                 </p>
               </Col>
+              <Col lg={5}>
+                <aside className="panel-informacion p-4 p-md-5 rounded-4">
+                  <h3 className="h4 mb-4">Información adicional</h3>
+                  <ul className="lista-informacion mb-0">
+                    <li><strong>Planificación</strong><span>Recomendamos solicitar la cotización con suficiente anticipación, especialmente para fechas de alta demanda.</span></li>
+                    <li><strong>Opciones especiales</strong><span>Podemos adaptar el menú para preferencias vegetarianas y restricciones alimentarias informadas previamente.</span></li>
+                    <li><strong>Área de servicio</strong><span>Atendemos eventos en San Carlos y zonas cercanas; otras ubicaciones se revisan al preparar la propuesta.</span></li>
+                    <li><strong>Propuesta personalizada</strong><span>El precio final depende del menú, cantidad de invitados, ubicación, montaje y personal requerido.</span></li>
+                  </ul>
+                </aside>
+              </Col>
 
               <Col lg={6}>
                 <div className="panel-valores p-4 p-md-5 rounded-4 shadow-lg position-relative">
