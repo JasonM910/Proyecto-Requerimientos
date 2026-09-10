@@ -1,48 +1,112 @@
 const servicios = [
   {
     id: 1,
-    titulo: "Catering para bodas",
-    tipoEvento: "Bodas y recepciones",
-    descripcion: "Una propuesta gastronómica elegante para celebrar uno de los días más importantes.",
-    detalle:
-      "Diseñamos el servicio según el estilo de la boda, el horario y la cantidad de invitados. Coordinamos el menú, el montaje y la atención para que cada momento se sienta especial.",
+    titulo: "Eventos Sociales",
+    tipoEvento: "Social",
+    descripcion: "Bautizos, cumpleaños, aniversarios y reuniones familiares con menús adaptados a cada ocasión.",
+    detalle: "Diseñamos un servicio completo para celebraciones familiares e íntimas. Nos encargamos del montaje, la atención a tus invitados y la preparación de platillos frescos con ingredientes seleccionados.",
     caracteristicas: [
-      "Menú personalizado y degustación previa",
-      "Opciones de cena servida o tipo buffet",
-      "Alternativas vegetarianas y para restricciones alimentarias",
-      "Montaje y presentación acordes con la celebración"
+      "Platillos adaptados al tipo de invitados",
+      "Montaje y cristalería básica incluida",
+      "Personal de servicio uniformado"
     ],
-    incluye: ["Planificación del menú", "Personal de servicio", "Montaje de alimentos", "Limpieza del área de servicio"]
+    incluye: [
+      "Entrada, plato fuerte y postre",
+      "Estación de bebidas y café",
+      "Atención durante 4 horas de evento"
+    ],
+    imagen: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 2,
-    titulo: "Catering para cumpleaños",
-    tipoEvento: "Cumpleaños y reuniones familiares",
-    descripcion: "Opciones prácticas y llenas de sabor para compartir con familia y amigos.",
-    detalle:
-      "Preparamos propuestas flexibles para celebraciones infantiles, juveniles o de adultos, con formatos fáciles de compartir y una presentación adaptada al tema del evento.",
+    titulo: "Bodas y Recepciones",
+    tipoEvento: "Boda",
+    descripcion: "Banquetes elegantes, estaciones de bocadillos y cenas servidas para el día más especial.",
+    detalle: "Creamos una experiencia gastronómica inolvidable para tu boda. Desde cócteles de bienvenida hasta cenas de tres tiempos, cuidando cada detalle estético y organizativo.",
     caracteristicas: [
-      "Menús para público infantil y adulto",
-      "Bocadillos, estaciones o buffet",
-      "Porciones ajustadas a la cantidad de invitados",
-      "Presentación adaptable a la temática"
+      "Prueba de menú previa a la confirmación",
+      "Montaje de mesa principal e invitados",
+      "Coordinación directa con tu wedding planner"
     ],
-    incluye: ["Selección de menú", "Preparación y traslado", "Montaje de la mesa de alimentos", "Utensilios para servir"]
+    incluye: [
+      "Cóctel de bienvenida con bocadillos",
+      "Cena formal a tres tiempos",
+      "Brindis con cristalería especial",
+      "Equipo completo de meseros"
+    ],
+    imagen: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 3,
-    titulo: "Catering empresarial",
-    tipoEvento: "Eventos corporativos",
-    descripcion: "Servicio puntual y profesional para reuniones, capacitaciones y actividades de empresa.",
-    detalle:
-      "Atendemos actividades corporativas con propuestas funcionales que se ajustan a la agenda, la imagen de la empresa y el formato de cada reunión.",
+    titulo: "Eventos Corporativos",
+    tipoEvento: "Corporativo",
+    descripcion: "Coffee breaks, almuerzos ejecutivos y cenas de fin de año con puntualidad y profesionalismo.",
+    detalle: "Ofrecemos soluciones eficientes y de alta presentación para reuniones empresariales, seminarios y conferencias. Menús livianos, dinámicos y servidos a tiempo.",
     caracteristicas: [
-      "Coffee breaks, desayunos, almuerzos y cenas",
-      "Entrega y montaje en el lugar del evento",
-      "Presentación profesional",
-      "Horarios coordinados con la agenda empresarial"
+      "Servicio puntual adaptado al itinerario",
+      "Opciones de box lunch o buffet",
+      "Estructura para reuniones de alto nivel"
     ],
-    incluye: ["Asesoría según el horario", "Transporte de alimentos", "Montaje corporativo", "Personal de servicio según el paquete"]
+    incluye: [
+      "Estación continua de café y bocadillos",
+      "Almuerzo servido o tipo buffet",
+      "Montaje rápido y discreto"
+    ],
+    imagen: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 4,
+    titulo: "Graduaciones y Galas",
+    tipoEvento: "Gala / Graduación",
+    descripcion: "Celebraciones de gran escala con estaciones de comida interactivas y banquetes de gala.",
+    detalle: "Diseñado para eventos multitudinarios que requieren fluidez y elegancia. Combinamos cenas estructuradas o barras gastronómicas dinámicas para mantener un ambiente festivo.",
+    caracteristicas: [
+      "Capacidad para atender grandes volúmenes de personas",
+      "Barras de bebidas y coctelería temática",
+      "Logística ágil en cocina y salón"
+    ],
+    incluye: [
+      "Plato fuerte con guarniciones gourmet",
+      "Barra de postres variados",
+      "Personal de logística y servicio"
+    ],
+    imagen: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 5,
+    titulo: "Catering al Aire Libre y Quinta",
+    tipoEvento: "Exterior",
+    descripcion: "Parrilladas gourmet, estaciones campestres y servicios adaptados a jardines o fincas.",
+    detalle: "Servicio especializado en montaje exterior con equipo térmico y mobiliario adaptado para mantener la frescura y temperatura ideal en entornos naturales o quintas.",
+    caracteristicas: [
+      "Manejo de equipo de cocina móvil e itinerante",
+      "Estaciones de parrilla en vivo",
+      "Montaje rústico y elegante"
+    ],
+    incluye: [
+      "Carnes y cortes preparados al momento",
+      "Ensaladas frescas y guarniciones calientes",
+      "Toldos y estaciones de hidratación"
+    ],
+    imagen: "https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 6,
+    titulo: "Cocteles y Despedidas",
+    tipoEvento: "Coctelería",
+    descripcion: "Formatos ligeros a base de canapés, pasabocas gourmet y bebidas para eventos de tarde o noche.",
+    detalle: "Una alternativa moderna e informal donde los invitados circulan libremente mientras disfrutan de una secuencia constante de bocadillos fríos, calientes y coctelería de autor.",
+    caracteristicas: [
+      "Servicio tipo bocadillo volante (finger food)",
+      "Coctelería clásica y sin alcohol",
+      "Diseño conceptual y estético"
+    ],
+    incluye: [
+      "Secuencia de 8 a 12 tipos de bocadillos",
+      "Bartender y meseros dedicados",
+      "Cristalería fina para coctelería"
+    ],
+    imagen: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80"
   }
 ];
 

@@ -5,189 +5,218 @@ import servicios from "../data/services";
 
 function Home() {
   return (
-    <>
-      {/* Presentación e identidad del negocio */}
-      <section className="hero-inicio py-5">
-        <Container className="text-center py-4">
-          <span className="hero-etiqueta">Cocina · Celebración · Experiencia</span>
+      <>
+        <section className="hero-inicio py-5 position-relative overflow-hidden">
+          <Container className="text-center py-5 position-relative z-1">
+            <div className="d-inline-block mb-3 px-3 py-1 rounded-pill bg-white shadow-xs border border-verde-salvia-light">
+              <span className="hero-etiqueta fw-bold"> Cocina · Celebración · Experiencia</span>
+            </div>
 
-          <h1 className="display-4 fw-bold">
-            Catering Services
-          </h1>
+            <h1 className="display-3 fw-bold tracking-tight mb-3">
+              Catering Services
+            </h1>
 
-          <p className="lead mt-3 text-muted">
-            Sabor que reúne. Creamos experiencias gastronómicas para tus eventos especiales.
-          </p>
-
-          <Button
-            as={Link}
-            to="/servicios"
-            size="lg"
-            className="btn-botanico mt-3 shadow-sm"
-          >
-            Ver servicios
-          </Button>
-
-        </Container>
-      </section>
-
-      {/* Información general del negocio */}
-      <section className="py-5" aria-labelledby="sobre-nosotros-titulo">
-        <Container>
-          <Row className="align-items-center g-5">
-            <Col lg={7}>
-              <span className="seccion-etiqueta">Quiénes somos</span>
-              <h2 id="sobre-nosotros-titulo" className="mt-2 mb-3">
-                Convertimos cada evento en un momento para recordar
-              </h2>
-              <p className="text-muted mb-3">
-                Somos un negocio de catering dedicado a planificar y servir
-                experiencias gastronómicas para celebraciones sociales y eventos
-                corporativos. Adaptamos cada propuesta al tipo de evento, cantidad
-                de invitados y preferencias de nuestros clientes.
-              </p>
-              <p className="text-muted mb-0">
-                Nuestro equipo acompaña cada detalle, desde la selección del menú
-                hasta la presentación y el servicio, con ingredientes frescos,
-                atención cercana y una organización confiable.
-              </p>
-            </Col>
-
-            <Col lg={5}>
-              <div className="panel-valores p-4 p-md-5 rounded-4">
-                <h3 className="h5 mb-4">Lo que nos distingue</h3>
-                <ul className="lista-valores mb-0">
-                  <li>Menús adaptados a cada ocasión</li>
-                  <li>Ingredientes frescos y de calidad</li>
-                  <li>Presentación cuidada y servicio cercano</li>
-                </ul>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-
-      {/* Servicios */}
-      <section className="py-5">
-
-        <Container>
-
-          <h2 className="text-center mb-4">
-            Nuestros servicios
-          </h2>
-
-          <Row className="g-4">
-
-            {servicios.map((servicio) => (
-              <Col
-                key={servicio.id}
-                md={4}
-              >
-
-                <ServiceCard
-                  id={servicio.id}
-                  titulo={servicio.titulo}
-                  descripcion={servicio.descripcion}
-                />
-
-              </Col>
-            ))}
-
-          </Row>
-
-        </Container>
-
-      </section>
-
-
-      {/* Información complementaria */}
-      <section className="seccion-informacion py-5" aria-labelledby="informacion-titulo">
-        <Container>
-          <div className="text-center mb-5">
-            <span className="seccion-etiqueta">Antes de reservar</span>
-            <h2 id="informacion-titulo" className="mt-2 mb-2">
-              Información importante para tu evento
-            </h2>
-            <p className="text-muted mx-auto mb-0 texto-limitado">
-              Conoce las condiciones generales del servicio y algunos detalles útiles para planificar con tranquilidad.
+            <p className="lead mx-auto text-muted texto-limitado fs-5 mb-4">
+              Sabor que reúne. Creamos experiencias gastronómicas memorables para tus eventos sociales y corporativos.
             </p>
-          </div>
 
-          <Row className="g-4 align-items-start">
-            <Col lg={7}>
-              <div className="panel-detalle p-4 p-md-5 rounded-4">
-                <h3 className="h4 mb-4">Condiciones generales</h3>
-                <Accordion className="acordeon-botanico" flush>
-                  <Accordion.Item eventKey="0">
-                    <Accordion.Header>Reserva y confirmación</Accordion.Header>
-                    <Accordion.Body>
-                      La fecha se reserva una vez aceptada la cotización y realizado el anticipo acordado. La disponibilidad está sujeta a confirmación.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item eventKey="1">
-                    <Accordion.Header>Cantidad de invitados</Accordion.Header>
-                    <Accordion.Body>
-                      La cantidad final de personas debe confirmarse con anticipación. Los cambios posteriores están sujetos a disponibilidad y pueden modificar el precio.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item eventKey="2">
-                    <Accordion.Header>Cambios y cancelaciones</Accordion.Header>
-                    <Accordion.Body>
-                      Los cambios de fecha, menú o alcance deben solicitarse con anticipación. Las cancelaciones y devoluciones se evaluarán según los gastos ya realizados.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item eventKey="3">
-                    <Accordion.Header>Montaje y ubicación</Accordion.Header>
-                    <Accordion.Body>
-                      El acceso, horario de montaje, condiciones del lugar y costos de traslado se coordinan antes del evento y deben quedar incluidos en la propuesta final.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                </Accordion>
-              </div>
-            </Col>
+            <div className="d-flex justify-content-center gap-3 flex-wrap">
+              <Button
+                  as={Link}
+                  to="/servicios"
+                  size="lg"
+                  className="btn-botanico shadow-sm px-4 py-2"
+              >
+                Explorar servicios
+              </Button>
+              <Button
+                  as={Link}
+                  to="/cotizacion"
+                  size="lg"
+                  className="btn-botanico-outline px-4 py-2"
+              >
+                Solicitar cotización
+              </Button>
+            </div>
+          </Container>
+        </section>
 
-            <Col lg={5}>
-              <aside className="panel-informacion p-4 p-md-5 rounded-4">
-                <h3 className="h4 mb-4">Información adicional</h3>
-                <ul className="lista-informacion mb-0">
-                  <li><strong>Planificación</strong><span>Recomendamos solicitar la cotización con suficiente anticipación, especialmente para fechas de alta demanda.</span></li>
-                  <li><strong>Opciones especiales</strong><span>Podemos adaptar el menú para preferencias vegetarianas y restricciones alimentarias informadas previamente.</span></li>
-                  <li><strong>Área de servicio</strong><span>Atendemos eventos en San José y zonas cercanas; otras ubicaciones se revisan al preparar la propuesta.</span></li>
-                  <li><strong>Propuesta personalizada</strong><span>El precio final depende del menú, cantidad de invitados, ubicación, montaje y personal requerido.</span></li>
-                </ul>
-              </aside>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+        {/* Quiénes Somos / Propuesta de Valor */}
+        <section className="py-5 my-3" aria-labelledby="sobre-nosotros-titulo">
+          <Container>
+            <Row className="align-items-center g-5">
+              <Col lg={6}>
+                <span className="seccion-etiqueta">Quiénes somos</span>
+                <h2 id="sobre-nosotros-titulo" className="display-6 fw-bold mt-2 mb-3">
+                  Convertimos cada evento en un momento para recordar
+                </h2>
+                <p className="text-muted mb-3 fs-6 lh-lg">
+                  Somos un equipo dedicado a planificar y servir propuestas gastronómicas a la medida.
+                  Adaptamos cada detalle al tipo de celebración, número de invitados y preferencias de tu menú.
+                </p>
+                <p className="text-muted mb-4 fs-6 lh-lg">
+                  Desde la preparación con ingredientes frescos hasta el montaje final, aseguramos una experiencia fluida y confiable.
+                </p>
+              </Col>
 
+              <Col lg={6}>
+                <div className="panel-valores p-4 p-md-5 rounded-4 shadow-lg position-relative">
+                  <h3 className="h4 fw-bold mb-4 text-white">Lo que nos distingue</h3>
+                  <div className="d-flex flex-column gap-3">
+                    <div className="d-flex align-items-start gap-3">
+                      <div className="icono-valor-box rounded-circle d-flex align-items-center justify-content-center">
+                        ✓
+                      </div>
+                      <div>
+                        <h5 className="h6 fw-bold mb-1 text-verde-menta">Menús Personalizados</h5>
+                        <p className="small text-white-50 mb-0">Adaptados exactamente al gusto de tus invitados y al concepto del evento.</p>
+                      </div>
+                    </div>
 
-      {/* Cotización */}
-      <section className="encabezado-pagina py-5">
+                    <div className="d-flex align-items-start gap-3">
+                      <div className="icono-valor-box rounded-circle d-flex align-items-center justify-content-center">
+                        ✓
+                      </div>
+                      <div>
+                        <h5 className="h6 fw-bold mb-1 text-verde-menta">Calidad Garantizada</h5>
+                        <p className="small text-white-50 mb-0">Ingredientes de alta frescura preparados por profesionales apasionados.</p>
+                      </div>
+                    </div>
 
-        <Container className="text-center">
+                    <div className="d-flex align-items-start gap-3">
+                      <div className="icono-valor-box rounded-circle d-flex align-items-center justify-content-center">
+                        ✓
+                      </div>
+                      <div>
+                        <h5 className="h6 fw-bold mb-1 text-verde-menta">Atención Integral</h5>
+                        <p className="small text-white-50 mb-0">Nos encargamos del montaje y la logística para que disfrutes sin preocupaciones.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </section>
 
-          <h2>
-            ¿Estás organizando un evento?
-          </h2>
+        {/* Servicios Destacados */}
+        <section className="py-5 bg-verde-hielo-soft">
+          <Container>
+            <div className="text-center mb-5">
+              <span className="seccion-etiqueta">Nuestras Propuestas</span>
+              <h2 className="display-6 fw-bold mt-2">Nuestros Servicios</h2>
+            </div>
 
-          <p>
-            Solicita una cotización para conocer las opciones disponibles.
-          </p>
+            <Row className="g-4">
+              {servicios.map((servicio) => (
+                  <Col key={servicio.id} md={6} lg={4}>
+                    <ServiceCard
+                        id={servicio.id}
+                        titulo={servicio.titulo}
+                        descripcion={servicio.descripcion}
+                        tipoEvento={servicio.tipoEvento}
+                        caracteristicas={servicio.caracteristicas}
+                        imagen={servicio.imagen}
+                    />
+                  </Col>
+              ))}
+            </Row>
+          </Container>
+        </section>
 
-          <Button
-            as={Link}
-            to="/cotizacion"
-            className="btn-botanico mt-2"
-          >
-            Solicitar cotización
-          </Button>
+        {/* Información importante */}
+        <section className="seccion-informacion py-5" aria-labelledby="informacion-titulo">
+          <Container className="py-3">
+            <div className="text-center mb-5">
+              <span className="seccion-etiqueta">Antes de reservar</span>
+              <h2 id="informacion-titulo" className="display-6 fw-bold mt-2 mb-2">
+                Información importante para tu evento
+              </h2>
+              <p className="text-muted mx-auto mb-0 texto-limitado">
+                Conoce las condiciones generales del servicio y algunos detalles útiles para planificar con tranquilidad.
+              </p>
+            </div>
 
-        </Container>
+            <Row className="g-4 align-items-stretch">
+              <Col lg={7}>
+                <div className="panel-detalle p-4 p-md-5 rounded-4 h-100">
+                  <h3 className="h4 fw-bold mb-4">Condiciones generales</h3>
+                  <Accordion className="acordeon-botanico" flush defaultActiveKey="0">
+                    <Accordion.Item eventKey="0">
+                      <Accordion.Header>Reserva y confirmación</Accordion.Header>
+                      <Accordion.Body className="text-muted">
+                        La fecha se reserva una vez aceptada la cotización y realizado el anticipo acordado. La disponibilidad está sujeta a confirmación previa.
+                      </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="1">
+                      <Accordion.Header>Cantidad de invitados</Accordion.Header>
+                      <Accordion.Body className="text-muted">
+                        La cantidad final de personas debe confirmarse con anticipación. Los cambios posteriores están sujetos a disponibilidad y ajustes en la propuesta.
+                      </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="2">
+                      <Accordion.Header>Cambios y cancelaciones</Accordion.Header>
+                      <Accordion.Body className="text-muted">
+                        Los cambios de fecha o menú deben solicitarse con margen de tiempo. Las cancelaciones se evalúan de acuerdo con los insumos adquiridos previamente.
+                      </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="3">
+                      <Accordion.Header>Montaje y ubicación</Accordion.Header>
+                      <Accordion.Body className="text-muted">
+                        El horario de montaje, logística del lugar y traslado se coordinan antes del evento para asegurar puntualidad.
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  </Accordion>
+                </div>
+              </Col>
 
-      </section>
-    </>
+              <Col lg={5}>
+                <aside className="panel-informacion p-4 p-md-5 rounded-4 h-100">
+                  <h3 className="h4 fw-bold mb-4 text-white">Información adicional</h3>
+                  <ul className="lista-informacion mb-0">
+                    <li>
+                      <strong>Planificación</strong>
+                      <span>Recomendamos cotizar con anticipación para asegurar fecha.</span>
+                    </li>
+                    <li>
+                      <strong>Menús Especiales</strong>
+                      <span>Adaptamos platillos para opciones vegetarianas o alergias.</span>
+                    </li>
+                    <li>
+                      <strong>Cobertura</strong>
+                      <span>Atendemos en San José y zonas aledañas.</span>
+                    </li>
+                    <li>
+                      <strong>Propuesta Personalizada</strong>
+                      <span>Cotizaciones adaptadas a tu presupuesto y necesidades.</span>
+                    </li>
+                  </ul>
+                </aside>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+
+        {/* Banner Cotización */}
+        <section className="py-5 my-4">
+          <Container>
+            <div className="panel-valores p-5 rounded-5 text-center position-relative overflow-hidden shadow-lg">
+              <h2 className="display-6 fw-bold mb-3 text-white">¿Estás organizando un evento especial?</h2>
+              <p className="lead text-verde-niebla mb-4 mx-auto texto-limitado">
+                Cuéntanos sobre tu idea y diseñemos una propuesta gastronómica inolvidable.
+              </p>
+              <Button
+                  as={Link}
+                  to="/cotizacion"
+                  size="lg"
+                  className="btn-botanico shadow-md px-5 py-3 fw-bold"
+              >
+                Solicitar cotización personalizada
+              </Button>
+            </div>
+          </Container>
+        </section>
+      </>
   );
 }
 
