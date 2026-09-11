@@ -45,7 +45,7 @@ function Home() {
         <section className="py-5 my-3" aria-labelledby="sobre-nosotros-titulo">
           <Container>
             <Row className="align-items-center g-5">
-              <Col lg={6}>
+              <Col lg={7}>
                 <span className="seccion-etiqueta">Quiénes somos</span>
                 <h2 id="sobre-nosotros-titulo" className="display-6 fw-bold mt-2 mb-3">
                   Convertimos cada evento en un momento para recordar
@@ -58,19 +58,8 @@ function Home() {
                   Desde la preparación con ingredientes frescos hasta el montaje final, aseguramos una experiencia fluida y confiable.
                 </p>
               </Col>
-              <Col lg={5}>
-                <aside className="panel-informacion p-4 p-md-5 rounded-4">
-                  <h3 className="h4 mb-4">Información adicional</h3>
-                  <ul className="lista-informacion mb-0">
-                    <li><strong>Planificación</strong><span>Recomendamos solicitar la cotización con suficiente anticipación, especialmente para fechas de alta demanda.</span></li>
-                    <li><strong>Opciones especiales</strong><span>Podemos adaptar el menú para preferencias vegetarianas y restricciones alimentarias informadas previamente.</span></li>
-                    <li><strong>Área de servicio</strong><span>Atendemos eventos en San Carlos y zonas cercanas; otras ubicaciones se revisan al preparar la propuesta.</span></li>
-                    <li><strong>Propuesta personalizada</strong><span>El precio final depende del menú, cantidad de invitados, ubicación, montaje y personal requerido.</span></li>
-                  </ul>
-                </aside>
-              </Col>
 
-              <Col lg={6}>
+              <Col lg={5}>
                 <div className="panel-valores p-4 p-md-5 rounded-4 shadow-lg position-relative">
                   <h3 className="h4 fw-bold mb-4 text-white">Lo que nos distingue</h3>
                   <div className="d-flex flex-column gap-3">
@@ -111,7 +100,7 @@ function Home() {
         </section>
 
         {/* Servicios Destacados */}
-        <section className="py-5 bg-verde-hielo-soft">
+        <section className="seccion-menus py-5">
           <Container>
             <div className="text-center mb-5">
               <span className="seccion-etiqueta">Nuestras Propuestas</span>
@@ -149,7 +138,7 @@ function Home() {
             </div>
 
             <Row className="g-4 align-items-stretch">
-              <Col lg={7}>
+              <Col lg={6}>
                 <div className="panel-detalle p-4 p-md-5 rounded-4 h-100">
                   <h3 className="h4 fw-bold mb-4">Condiciones generales</h3>
                   <Accordion className="acordeon-botanico" flush defaultActiveKey="0">
@@ -181,25 +170,25 @@ function Home() {
                 </div>
               </Col>
 
-              <Col lg={5}>
+              <Col lg={6}>
                 <aside className="panel-informacion p-4 p-md-5 rounded-4 h-100">
                   <h3 className="h4 fw-bold mb-4 text-white">Información adicional</h3>
                   <ul className="lista-informacion mb-0">
                     <li>
                       <strong>Planificación</strong>
-                      <span>Recomendamos cotizar con anticipación para asegurar fecha.</span>
+                      <span>Recomendamos solicitar la cotización con suficiente anticipación, especialmente para fechas de alta demanda.</span>
                     </li>
                     <li>
                       <strong>Menús Especiales</strong>
-                      <span>Adaptamos platillos para opciones vegetarianas o alergias.</span>
+                      <span>Podemos adaptar el menú para preferencias vegetarianas y restricciones alimentarias informadas previamente.</span>
                     </li>
                     <li>
                       <strong>Cobertura</strong>
-                      <span>Atendemos en San José y zonas aledañas.</span>
+                      <span>Atendemos eventos en San Carlos y zonas cercanas; otras ubicaciones se revisan al preparar la propuesta.</span>
                     </li>
                     <li>
                       <strong>Propuesta Personalizada</strong>
-                      <span>Cotizaciones adaptadas a tu presupuesto y necesidades.</span>
+                      <span>El precio final depende del menú, cantidad de invitados, ubicación, montaje y personal requerido.</span>
                     </li>
                   </ul>
                 </aside>
@@ -220,7 +209,7 @@ function Home() {
                   as={Link}
                   to="/cotizacion"
                   size="lg"
-                  className="btn-botanico shadow-md px-5 py-3 fw-bold"
+                  className="btn-botanico-outline btn-cta-cotizacion shadow-md px-5 py-3 fw-bold"
               >
                 Solicitar cotización personalizada
               </Button>

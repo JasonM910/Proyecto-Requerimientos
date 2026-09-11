@@ -6,7 +6,7 @@ import menus from "../data/menus";
 function Services() {
   return (
       <main>
-        <section className="encabezado-pagina py-5 border-bottom border-verde-salvia-light">
+        <section className="encabezado-pagina py-5 border-verde-salvia-light">
           <Container className="text-center py-4">
             <span className="seccion-etiqueta">Servicios para eventos</span>
             <h1 className="display-4 fw-bold mt-2">Una propuesta para cada ocasión</h1>

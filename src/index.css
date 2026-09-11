@@ -57,6 +57,35 @@ main {
   box-shadow: 0 14px 35px rgba(var(--verde-bosque-rgb), 0.14);
 }
 
+.panel-valores .btn-botanico:hover,
+.panel-valores .btn-botanico:focus-visible {
+  background-color: var(--verde-menta) !important;
+  border-color: var(--verde-menta) !important;
+  color: var(--verde-bosque) !important;
+}
+
+.panel-detalle .btn-botanico:hover,
+.panel-detalle .btn-botanico:focus-visible {
+  background-color: var(--verde-menta) !important;
+  border-color: var(--verde-menta) !important;
+  color: var(--verde-bosque) !important;
+}
+
+.panel-valores .btn-cta-cotizacion {
+  background-color: transparent;
+  border-color: var(--blanco-puro);
+  color: var(--blanco-puro);
+}
+
+.panel-valores .btn-cta-cotizacion:hover,
+.panel-valores .btn-cta-cotizacion:focus,
+.panel-valores .btn-cta-cotizacion:focus-visible,
+.panel-valores .btn-cta-cotizacion:active {
+  background-color: var(--verde-menta) !important;
+  border-color: var(--verde-menta) !important;
+  color: var(--verde-bosque) !important;
+}
+
 .lista-valores {
   display: grid;
   gap: 1rem;
@@ -231,11 +260,15 @@ main {
   --bs-accordion-border-color: rgba(var(--verde-salvia-rgb), 0.45);
   --bs-accordion-active-color: var(--verde-bosque);
   --bs-accordion-active-bg: var(--verde-hielo);
-  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.2rem rgba(var(--verde-salvia-rgb), 0.22);
+  --bs-accordion-btn-focus-box-shadow: none;
 }
 
 .acordeon-botanico .accordion-button {
   font-weight: 600;
+}
+
+.acordeon-botanico .accordion-button:focus {
+  box-shadow: none;
 }
 
 .panel-informacion {
@@ -399,4 +432,20 @@ main {
   border-color: var(--verde-bosque);
   color: var(--blanco-puro);
   transform: translateY(-2px);
+}
+
+.navbar-botanica .btn-botanico-outline:hover,
+.navbar-botanica .btn-botanico-outline:focus-visible {
+  background-color: var(--verde-salvia);
+  border-color: var(--verde-salvia);
+  color: var(--verde-bosque) !important;
+}
+
+.panel-valores .btn-cta-cotizacion:hover,
+.panel-valores .btn-cta-cotizacion:focus,
+.panel-valores .btn-cta-cotizacion:focus-visible,
+.panel-valores .btn-cta-cotizacion:active {
+  background-color: var(--verde-menta) !important;
+  border-color: var(--verde-menta) !important;
+  color: var(--verde-bosque) !important;
 }
